@@ -5,9 +5,11 @@ Original Project: https://github.com/cprerovsky/rest-quest
 `docker build -t toughiq/rest-quest github.com/toughIQ/docker-rest-quest`
 
 Build a local docker image named "toughiq/rest-quest" using the Dockerfile from GitHub repo. If you want to make changes to the Dockerfile itself, just clone the repo using
+
 `git clone https://github.com/toughIQ/docker-rest-quest.git`
 
 Make your changes to the Dockerfile and build the container again from local sources:
+
 `docker build -t "toughiq/rest-quest" .`
 
 
