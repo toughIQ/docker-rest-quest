@@ -4,7 +4,8 @@ MAINTAINER toughiq@gmail.com
 # update system, install git and remove apt files afterwards
 RUN apt-get update \
     && apt-get install -y git \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # fetch source code
 RUN git clone https://github.com/cprerovsky/rest-quest.git
