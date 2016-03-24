@@ -1,6 +1,9 @@
 ## Server container for REST Quest
 Original Project: https://github.com/cprerovsky/rest-quest
 
+### Build container from Dockerfile
+`docker build -t toughiq/rest-quest github.com/toughIQ/docker-rest-quest`
+
 ### Run the server
 `docker run -d --name rqserver -p 3000:3000 toughiq/rest-quest`
 
