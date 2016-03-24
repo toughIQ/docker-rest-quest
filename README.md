@@ -1,5 +1,6 @@
 ## Server container for REST Quest
-__Original Project:__ https://github.com/cprerovsky/rest-quest
+__Original REST Quest Project:__ https://github.com/cprerovsky/rest-quest
+__Docker REST Quest Project:__ https://github.com/toughIQ/docker-rest-quest
 
 ### Run the server
 `docker run -d --name rqserver -p 3000:3000 toughiq/rest-quest`
