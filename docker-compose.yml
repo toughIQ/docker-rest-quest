@@ -1,0 +1,11 @@
+server:
+  image: toughiq/rest-quest:latest
+  restart: always
+  ports:
+    - 3000:3000
+client:
+  image: toughiq/rest-quest:latest
+  restart: always
+  links:
+    - server:rqserver
+  command: node client.js
