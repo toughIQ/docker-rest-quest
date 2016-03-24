@@ -1,11 +1,20 @@
-server:
+rqserver:
   image: toughiq/rest-quest:latest
+  container_name: rqserver
   restart: always
   ports:
     - 3000:3000
-client:
+rqclient1:
   image: toughiq/rest-quest:latest
+  container_name: rqclient1
   restart: always
   links:
-    - server:rqserver
+    - rqserver
+  command: node client.js
+rqclient2:
+  image: toughiq/rest-quest:latest
+  container_name: rqclient2
+  restart: always
+  links:
+    - rqserver
   command: node client.js
