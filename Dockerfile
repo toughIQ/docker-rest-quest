@@ -1,8 +1,10 @@
 FROM node:slim
 MAINTAINER toughiq@gmail.com
 
-# update system and install git
-RUN apt-get update && apt-get install -y git
+# update system, install git and remove apt files afterwards
+RUN apt-get update \
+    && apt-get install -y git \
+    && rm -rf /var/lib/apt/lists/*
 
 # fetch source code
 RUN git clone https://github.com/cprerovsky/rest-quest.git
