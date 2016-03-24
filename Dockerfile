@@ -11,7 +11,7 @@ RUN git clone https://github.com/cprerovsky/rest-quest.git
 WORKDIR /rest-quest
 
 # change BASE_URL param in client.js to work with docker
-RUN sed -i '/localhost/rqserver/' client.js
+RUN sed -i 's/localhost/rqserver/' client.js
 
 # install node packages
 RUN npm install
