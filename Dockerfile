@@ -17,7 +17,7 @@ WORKDIR /rest-quest
 RUN sed -i 's/localhost/rqserver/' client.js
 
 # install node packages
-RUN npm install
+RUN npm install --ignore-scripts
 
 # set server start as default
 CMD ["node","server.js"]
